@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA de Poker</title>
+</head>
+<body>
+    <h1>Avaliação de Jogada de Poker</h1>
+    <form method="POST" action="/">
+        <label for="carta1">Valor da Primeira Carta:</label>
+        <input type="text" name="carta1" required>
+        <label for="naipe1">Naipe da Primeira Carta:</label>
+        <input type="text" name="naipe1" required>
+
+        <br>
+
+        <label for="carta2">Valor da Segunda Carta:</label>
+        <input type="text" name="carta2" required>
+        <label for="naipe2">Naipe da Segunda Carta:</label>
+        <input type="text" name="naipe2" required>
+
+        <br>
+
+        <input type="submit" value="Avaliar Jogada">
+    </form>
+
+    {% if resultado %}
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
