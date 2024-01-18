@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Open Range Pré-Flop</title>
+</head>
+<body>
+    <h1>Análise Open Range Pré-Flop</h1>
+
+    <form method="post" action="/">
+        <label for="carta1">Carta 1:</label>
+        <select name="carta1" required>
+            <option value="A">A</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="J">J</option>
+            <option value="Q">Q</option>
+            <option value="K">K</option>
+        </select>
+
+        <label for="naipe1">Naipe 1:</label>
+        <select name="naipe1" required>
+            <option value="hearts">Hearts</option>
+            <option value="diamonds">Diamonds</option>
+            <option value="clubs">Clubs</option>
+            <option value="spades">Spades</option>
+        </select>
+
+        <br>
+
+        <label for="carta2">Carta 2:</label>
+        <select name="carta2" required>
+            <option value="A">A</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="J">J</option>
+            <option value="Q">Q</option>
+            <option value="K">K</option>
+        </select>
+
+        <label for="naipe2">Naipe 2:</label>
+        <select name="naipe2" required>
+            <option value="hearts">Hearts</option>
+            <option value="diamonds">Diamonds</option>
+            <option value="clubs">Clubs</option>
+            <option value="spades">Spades</option>
+        </select>
+
+        <br>
+
+        <!-- Adicione um campo de seleção para a posição -->
+        <label for="posicao">Posição:</label>
+        <select name="posicao" required>
+            <option value="early">Early Position</option>
+            <option value="middle">Middle Position</option>
+            <option value="late">Late Position</option>
+        </select>
+        <br>
+        <button type="submit">Analisar</button>
+    </form>
+
+    {% if resultado %}
+        <p>{{ resultado }}</p>
+    {% else %}
+        <p>Insira suas cartas e faça a análise.</p>
+    {% endif %}
+</body>
+</html>
